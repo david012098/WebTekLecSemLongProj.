@@ -1,0 +1,24 @@
+div h1{
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    opacity: 0.5;
+    text-decoration: underline;
+}
+nav{
+    display: inline;
+    text-align: center;
+    list-style: none;
+    float: left;
+    width: 100%;
+    font-size: 30px;
+}
+nav li{
+    display: inline;
+    padding-right: 10px;
+}

@@ -55,17 +55,17 @@
     <div>
         <h3>HTTP Resource Addressing</h3>
         <li>HTTP resources are identified using URI (RFC 3986)</li>
-            <ul>scheme</ul>
-            <ul>authority
-                <ul>user information or authentication credentials</ul>
-                <ul>host - domain name to the server (DNS)</ul>
-                <ul>port number</ul>
+            <ul> - scheme</ul>
+            <ul> - authority
+                <ul> - user information or authentication credentials</ul>
+                <ul> - host - domain name to the server (DNS)</ul>
+                <ul> - port number</ul>
             </ul>
-            <ul>path to resource</ul>
-            <ul>query
-                <ul>typically provided as key=value pairs with (&) separators/url - encoded</ul>
+            <ul> - path to resource</ul>
+            <ul> - query
+                <ul> - typically provided as key=value pairs with (&) separators/url - encoded</ul>
             </ul>
-            <ul>fragment</ul>
+            <ul> - fragment</ul>
         <li>Message Headers</li>
         <li>Empty Line</li>
         <li>message body a.k.a payload</li>
@@ -77,5 +77,149 @@
         <li>Empty Line</li>
         <li>Message Body (Optional)</li>
     </div>
+    <div>
+        <h3>HTTP Response Message</h3>
+        <li>Status Line</li>
+            <ul> - HTTP Protocol Version </ul>
+            <ul> - Status Code </ul>
+            <ul> - Reason Phrase</ul>
+        <li>Response Headers</li>
+        <li>Empty Line</li>
+        <li>Message Body (Optional)</li>
+    </div>
+    <div>
+        <h3>HTTP Request Methods</h3>
+        <li>GET 
+           <ul> - Most commonly used HTTP method</ul>
+           <ul> - Used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity.</ul>
+           <ul> - Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval</ul>
+           <ul> - Must be supported by all general-purpose servers.</ul> 
+        </li>
+        <li>HEAD 
+           <ul> - Identical to GET, except the message body is not included in the response </ul>
+        </li>
+        <li>POST 
+            <ul> - Request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line.</ul>
+        </li>
+        <li>OPTIONS 
+            <ul> - Request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating resource retrieval.</ul>
+        </li>
+        <li>TRACE 
+            <ul> - Request the server to “echo” back to the client the received request</ul>
+            <ul> - Typically used for testing/diagnostics of the request chain</ul>
+        </li>
+        <li>PUT 
+            <ul> - Request the server to store the enclosed entity in the message under the specified request URI</ul>
+        </li>
+        <li>DELETE 
+            <ul> - Request the server to delete the resource identified by the request URI</ul>
+        </li>
+        <li>CONNECT 
+            <ul> - Reserved for use of tunneling proxy servers</ul>
+        </li>
+    </div>
+    <div>
+        <h3>HTTP Message Headers</h3>
+        <li>General Header Fields</li>
+            <ul> - Cache-control</ul>
+            <ul> - Connection</ul>
+            <ul> - Date</ul>
+            <ul> - Pragma</ul>
+            <ul> - Trailer</ul>
+            <ul> - Transfer-encoding</ul>
+            <ul> - Upgrade</ul>
+            <ul> - Via</ul>
+            <ul> - Warning</ul>
+        <li> Request Header Fields</li>
+            <ul> - Accept</ul>
+            <ul> - Accept-charset</ul>
+            <ul> - Accept-encoding</ul>
+            <ul> - Accept-Language</ul>
+            <ul> - Authorization</ul>
+            <ul> - Expect</ul>
+            <ul> - From</ul>
+            <ul> - Host</ul>
+            <ul> - If-match</ul>
+            <ul> - If-modified-since</ul>
+            <ul> - If-none-match</ul>
+            <ul> - If-Range</ul>
+            <ul> - If-Unmodified-Since</ul>
+            <ul> - Max-forward</ul>
+            <ul> - Proxy-Authorization</ul>
+            <ul> - Range</ul>
+            <ul> - Referer</ul>
+            <ul> - User-Agent</ul>
+        <li> Response Header Fields</li>
+            <ul> - Accept-Range</ul>
+            <ul> - Age</ul>
+            <ul> - E-Tag</ul>
+            <ul> - Location</ul>
+            <ul> - Proxy-Authenticate</ul>
+            <ul> - Retry-After</ul>
+            <ul> - Server</ul>
+            <ul> - Vary</ul>
+            <ul> - WWW-Authenticate</ul>
+        <li>Entity Header Fields</li>
+            <ul> - Allow</ul>
+            <ul> - Content-encoding</ul>
+            <ul> - Content-language</ul>
+            <ul> - Content-length</ul>
+            <ul> - Content-location</ul>
+            <ul> - Content-MD5</ul>
+            <ul> - Content-range</ul>
+            <ul> - Content-type</ul>
+            <ul> - Expires</ul>
+            <ul> - Last-Modified</ul>
+    </div>
+    <div>
+        <h3>HTTP Status Codes</h3>
+        <li>Informational(1xx)</li>
+            <ul> - 100 Continue</ul>
+            <ul> - 101 Switching Protocols</ul>
+        <li>Success(2xx)</li>
+            <ul> - 200 OK</ul>
+            <ul> - 202 Accepted</ul>
+            <ul> - 203 Non-Authoritative Information</ul>
+            <ul> - 204 No Content</ul>
+            <ul> - 205 Reset Content</ul>
+            <ul> - 206 Partial Content</ul>
+
+        <li>Redirection(3xx)</li>
+            <ul> - 300 Multiple Choices</ul>
+            <ul> - 301 Moved Permanently</ul>
+            <ul> - 302 Found</ul>
+            <ul> - 303 See Other</ul>
+            <ul> - 304 Not Modified</ul>
+            <ul> - 305 Use Proxy</ul>
+            <ul> - 307 Temporary Redirect</ul>
+        <li>Client error(4xx)</li>
+            <ul> - 400 Bad Request</ul>
+            <ul> - 401 Unauthorized</ul>
+            <ul> - 402 Payment Required</ul>
+            <ul> - 403 Forbidden</ul>
+            <ul> - 404 Not Found</ul>
+            <ul> - 405 Method Not Allowed</ul>
+            <ul> - 406 Not Acceptable</ul>
+            <ul> - 407 Proxy Authentication Required</ul>
+            <ul> - 408 Request Timeout</ul>
+            <ul> - 409 Conflict</ul>
+            <ul> - 410 Gone</ul>
+            <ul> - 411 Length Required</ul>
+            <ul> - 412 Precondition Failed</ul>
+            <ul> - 413 Request Entity Too Large</ul>
+            <ul> - 414 Request-URI Too Long</ul>
+            <ul> - 415 Unsupported Media Type</ul>
+            <ul> - 416 Request Range Not Satisfiable</ul>
+            <ul> - 417 Expectation Failed</ul>
+
+        <li>Server error(5xx)</li>
+            <ul> - 500 Internal Server Error</ul>
+            <ul> - 501 Not Implemented</ul>
+            <ul> - 502 Bad Gateway</ul>
+            <ul> - 503 Service Unavailable</ul>
+            <ul> - 504 Gateway Timeout</ul>
+            <ul> - 505 HTTP Version Not Supported</ul>
+    </div>
+        
 </body>
 </Html>

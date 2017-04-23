@@ -1,0 +1,1 @@
+No set up is needed. Simply open index.html to go to the website's main home page.
